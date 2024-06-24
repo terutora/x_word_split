@@ -11,7 +11,8 @@ function splitText() {
     resultDiv.innerHTML = '';
     chunks.forEach((chunk, index) => {
         const chunkDiv = document.createElement('div');
-        const chunkText = document.createElement('span');
+        const chunkText = document.createElement('textarea');
+        chunkText.readOnly = true;
         chunkText.innerText = chunk;
 
         const copyButton = document.createElement('button');
