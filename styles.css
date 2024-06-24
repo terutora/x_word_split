@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden; /* 親コンテナのスクロールを防ぐ */
 }
 
 .container {
@@ -17,6 +18,9 @@ body {
     max-width: 600px;
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
 }
 
 h1 {
@@ -25,7 +29,7 @@ h1 {
 }
 
 textarea {
-    width: 100%;
+    width: auto;
     height: 100px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -35,8 +39,13 @@ textarea {
     resize: none;
 }
 
-.result {
+#resultContainer {
+    flex: 1;
+    overflow-y: auto; /* 縦スクロールを許可 */
     margin-top: 20px;
+}
+
+.result {
     text-align: left;
 }
 
@@ -53,6 +62,7 @@ textarea {
 
 .result textarea {
     width: calc(100% - 60px);
+    height: auto;
     border: none;
     background: transparent;
     resize: none;

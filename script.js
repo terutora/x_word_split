@@ -28,8 +28,9 @@ function splitText() {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
-        alert('コピーしました: ' + text);
-    }, () => {
-        alert('コピーに失敗しました');
+        console.log('Copied to clipboard');
+    }
+    ).catch((error) => {
+        console.error('Failed to copy: ', error);
     });
 }
