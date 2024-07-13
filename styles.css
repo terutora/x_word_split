@@ -82,3 +82,13 @@ textarea {
 .copy-button:hover {
     background-color: #218838;
 }
+
+.options {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 5px;
+}

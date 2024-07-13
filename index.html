@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>140字分割ツール</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="icon_111260_256.ico" type="image/x-icon">
 </head>
 <body>
-
     <div class="container">
         <h1>140字分割ツール</h1>
-        <textarea id="inputText" placeholder="テキストを入力してください..." oninput="splitText()"></textarea>
+        <textarea id="inputText" placeholder="ここにテキストを入力してください"></textarea>
+        <div class="options">
+            <label>
+                <input type="checkbox" id="ignoreSpaces"> 空白をカウントしない
+            </label>
+            <label>
+                <input type="checkbox" id="ignoreNewlines"> 改行をカウントしない
+            </label>
+        </div>
+        <button onclick="splitText()">分割</button>
         <div id="resultContainer">
             <div id="result" class="result"></div>
         </div>
     </div>
-
     <script src="script.js"></script>
-
 </body>
 </html>
